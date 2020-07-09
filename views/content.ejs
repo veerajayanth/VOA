@@ -1,0 +1,16 @@
+<%- include('partials/head') %>
+<h1>contentpage</h1>
+<a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
+
+<p><%=username%></p>
+
+
+<% newPostitems.forEach((item) => {%>
+      <p><%=item.post%></p>
+<%});%>
+
+<form class="" action="/content" method="post">
+  <input type="text" name="postit" placeholder="post anonymously" value="">
+  <button type="submit" value=" " name="butt">Post</button>
+</form>
+<%- include('partials/foot') %>
